@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.triathlonova">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.game.Game2MainActivity">
+            <intent-filter>
+                <action android:name=".activity.game.Game2MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.ChooseReloadActivity">
+            <intent-filter>
+                <action android:name=".activity.interaction.ChooseReloadActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.SaveScoreActivity">
+            <intent-filter>
+                <action android:name=".activity.interaction.SaveScoreActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.ScoreBoardActivity">
+            <intent-filter>
+                <action android:name=".activity.interaction.ScoreBoardActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.ChooseLevelActivity">
+            <intent-filter>
+                <action android:name=".activity.interaction.ChooseLevelActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.LogInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.interaction.SignUpActivity">
+            <intent-filter>
+                <action android:name=".activity.interaction.SignUpActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.game.Game1Activity">
+            <intent-filter>
+                <action android:name=".activity.game.Game1Activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.game.Game2Activity">
+            <intent-filter>
+                <action android:name=".activity.game.Game2Activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.game.Game3Activity">
+            <intent-filter>
+                <action android:name=".activity.game.Game3Activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".game2.GameActivity">
+            <intent-filter>
+                <action android:name=".part2_hot_air_balloon.GameActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

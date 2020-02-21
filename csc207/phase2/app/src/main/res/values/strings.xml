@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Triathlonova</string>
+    <string name="p">PUSH</string>
+    <string name="r">R</string>
+    <string name="l">L</string>
+    <string name="d">D</string>
+    <string name="u">U</string>
+    <string name="Score">Score</string>
+    <string name="INSTRUCTION">INSTRUCTION</string>
+    <string name="level_1">Level 1</string>
+    <string name="level_2">Level 2</string>
+    <string name="level_3">Level 3</string>
+    <string name="jump_left">Jump Left</string>
+    <string name="jump_right">Jump Right</string>
+    <string name="play">Play</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="scoreboard">ScoreBoard</string>
+    <string name="score">SCORE:</string>
+    <string name="back_to_login">Back To Login</string>
+    <string name="top_10_ranking">Top 10 Ranking</string>
+    <string name="restart">Restart</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+    <string name="do_you_want_to_save_your_new_score">Do you want to save your new score?</string>
+    <string name="your_history_score">Your History Score:</string>
+    <string name="your_new_score">Your New Score:</string>
+    <string name="lives">LIVES:</string>
+    <string name="load_game">load game</string>
+    <string name="new_game">new game</string>
+    <string name="choose_a_level_below">Choose a level below</string>
+    <string name="down">DOWN</string>
+    <string name="todo">TODO</string>
+</resources>

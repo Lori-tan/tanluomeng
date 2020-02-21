@@ -1,0 +1,1767 @@
+#########
+# Step 1:
+### by Yuqin Yan yuqin.yan@mail.utoronto.ca
+Change: created package user which manage accounts in this game, Including class Account, AccountManagement,
+NoUsernameException, WrongPasswordException, UserHasExistedException, and data file userInfo.csv.
+class Account:
+class AccountManager:
+class NoUsernameException:
+class WrongPasswordException:
+class UserHasExistedException:
+data: userInfo.csv
+
+#########
+# Step 2:
+created packer part2_HotAirBalloon
+
+#########
+# Step 3:
+created package part3_PushSheep and a class Sheep.
+
+#########
+# Step 4:
+created a class Player under the package user.
+updated Account and Account classes.
+
+#########
+# Step 5:
+created a class PushSheepGame under package part3_PushSheep.
+
+#########
+# Step 6:
+created class GameView and class MainThread.
+updated MainActivity such that it is suitable for a game.
+
+#########
+# Step 7:
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  MainActivity and its xml file.
+Change:         redesigned MainActivity (including its xml file and MainActivity.java) to a log-in
+                interface, added buttonListeners (but have not been completely implemented).
+
+#########
+# Step 8:
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  MainActivity, SignUpActivity, AndroidManifest.xml
+Change:         added SignUpActivity (also accordingly modified intent in AndroidManifest.xml) and
+                renamed MainActivity as LogInActivity. Then introduced a package activity and then moved
+                these two activities into the package. Also Implemented LogInActivity.addListenerOnSignUpButton().
+
+#########
+# Step 9:
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  DBHelper.java, userInfo.csv
+Change:         added package database and added class DBHelper to it. Deleted userInfo.csv.
+
+#########
+# Step 10
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  DBHelper
+Change:         added DBHelper.queryData, DBHelper.insertData, DBHelper.updateData, DBHelper.deleteData
+                and getAllData in DBHelper. Implemented methods in DBHelper.
+
+#########
+# Step 11
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepActivity, activity_push_sheep.xml, AndroidManifest.xml, strings.xml
+Change:         added a new activity with only basic structure, PushSheepActivity, and added few string
+                values in strings.xml.
+
+#########
+# Step 12
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameView, HotAirBalloon.xml, StartGame2
+Change:         added a new activity with only basic structure, HotAirBalloonActivity.
+
+#########
+# Step 13
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  EntranceActivity.class, activity_entrance.xml
+Change:         added a new activity EntranceActivity for the first game after going through log in
+                activity.
+
+#########
+# Step 14
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  activity_hot_air_balloon.xml, HotAirBalloonActivity.java, AndroidManifest.xml
+Change:         added activity_hot_air_balloon.xml to res/layout, then linked the HotAirBalloonActivity
+                toward the activity_hot_air_balloon.xml in the AndroidManifest.xml.
+
+#########
+# Step 15
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  DBHelper, SignUpActivity, LogInActivity, activity_main.xml
+Change:         modified methods in DBHelper and implemented LOG IN and SIGN UP functions.
+                ABOUT DATABASE: now it has 4 columns: ID, USERNAME, PASSWORD, LEVEL.
+                LEVEL is the level that every player is in. After exiting the game, they can return to the level they were in when they leave.
+                Added a SHOW button in log-in interface that can demonstrate all the players and their level.
+
+#########
+# Step 16
+### by: Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected: SheepPusher, Player
+Change: created class SheepPusher that extends Player.
+
+#########
+# Step 17
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  AndroidManifest.xml, Game1EntranceActivity, HotAirBalloonActivity, LogInActivity,
+                activity_entrance.xml, activity_hot_air_balloon.xml
+Change:         modified the intent description in AndroidManifest.xml and fixed bugs in hotBalloon
+                level. Added EXPRESSWAY for DEVELOPERS, which is buttons that
+                for changing game level, in order to make developers can quickly switch game level.
+
+#########
+# Step 18
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Jumper.java, TowerGame.java, MapGenerator.java
+Change:         created a new package for the first game and added in three classes with basic structures
+                at this point.
+
+#########
+# Step 19
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  activity_hot_air_balloon_xml
+Change:         added the play button and the background in the activity_hot_air_balloon.xml.
+
+#########
+# Step 20
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  BitmapBank.java
+Change:         added a bitmap resources bank for loading and getting bitmap instances we need for the hot
+                air balloon game.
+
+#########
+# Step 21
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameView
+Change:         added handler and runnable to GameView for Game2
+
+#########
+# Step 22
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameView
+Change:         refactor on GameView
+
+#########
+# Step 23
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameView
+Change:         involve GameThread into GameView, and basic codes for creating and destroying surface
+
+#########
+# Step 24
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameThread
+Change:         create GameThread class for game2, and basic code for run method in GameThread
+
+#########
+# Step 25
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameEngine, AppConstants
+Change:         Create GameEngine and AppConstants classes which was used in GameThread
+
+#########
+# Step 26
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  BackgroundImage
+Change:         Create BackgroundImage class and finished getter and setter for coordinates
+
+#########
+# Step 27
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameEngine
+Change: involve BackgroundImage class into GameEngine class, and finish update method
+
+#########
+# Step 28
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  AppConstants
+Change:         getters for bitmap and gameEngine
+
+#########
+# Step 29
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  All files in part2_HotAirBalloon.
+Change:         Renamed all files in part2 for a better differentiability with other parts of the project.
+                Added a setter for Part2_GameThread.java, also changed some minor details of how Part2_GameView
+                interacts with instances in Part2_GameThread.
+
+#########
+# Step 30
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  HotAirBalloonActivity
+Change:         change the wrong class name 'StartGame2' to 'Part2_StartGame'.
+
+#########
+# Step 31
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SheepPusher, Player
+Change:         implemented move methods of SheepPusher and added some getters in Player.
+
+#########
+# Step 32
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  all part2_HotAirBalloon, HotAirBalloonActivity.java.
+Change:         Reverted the naming of those files, edited the HotAirBalloonActivity.java for compatibility.
+
+#########
+# Step 33
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  All part1_MagicTower
+Change:         Created an abstract superclass StationaryItem, which has Gem, Stairs, Wall, and Key
+                currently as its subclass. Also created an interface Collectable that Gem and Key implements.
+                Provided some simple implementation of StationaryItem superclass and Collectable interface.
+
+#########
+# Step 34
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SheepPusher, Player, Jumper
+Change:         changed Player to an abstract class.
+
+#########
+# Step 35
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SheepPusher, PushSheepThread, PushSheepView, SheepPusherActivity,
+                activity_push_sheep.xml, strings.xml
+Change:         Implemented SheepPusher and SheepPusherActivity. Created classes PushSheepThread and
+                PushSheepView. Also, added few string values in strings.xml.
+
+#########
+# Step 36
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Jumper.java, Game1EntranceActivity.java, TowerGame.java, Key.java, Gem.java,
+                TowerGameThread.java, TowerGameView.java
+Change:         Provided button onclick methods for the three buttons used in the game in
+                Game1EntranceActivity.java. Created TowerGameThread.java and TowerGameView.java that currently
+                inherited from GameView and Thread in com.example.triathlonova.
+
+#########
+# Step 37
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGame.java, TowerGameView.java, TowerGameThread.java
+Change:         Modified three classes that now provides call and reference specific to this game 1,
+                beginning to experiment with drawing objects onto screen through Sprites.
+
+#########
+# Step 38
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepManager.java, PushSheepView.java
+Change:         Added the PushSheepManager class and made modification on PushSheepView class.
+
+#########
+# Step 39
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  All java files in part3.
+Change:         Added the Sewer class, prepare to create the method fall in both Sheep and SheepPusher.
+                Updated the moveUp, Down,Left and Right method in SheepPusher, prepare for further testing. Slight
+                changes in other files, commented out some unsure codes, prepare for further testing.
+
+#########
+# Step 40
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepView, SheepPusherActivity
+Change:         Implemented SheepPusherActivity and PushSheepView with some basic structure, and formatted
+                with google format.
+
+#########
+# Step 41
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepManager.java, PushSheepView.java, PushSheepGame.java, PushSheepThread.java
+Change:         Added new comments for each class, specified where the coding ideas come from.
+
+#########
+# Step 42
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  All java files in part3.
+Change:         Changed methods in all these files, updated the view file.
+
+#########
+# Step 43
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepGame.java, PushSheepManager.java, PushSheepView.java, Sewer.java, Sheep.java
+Change:         Added getter method for rectangle in Sewer, added update method in Sheep. Slight changes in
+                other methods.
+
+#########
+# Step 44
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepManager.java, Sewer.java, Sheep.java, SheepPusher.java
+Change:         Implemented the fall method in Sheep and SheepPusher. Updated the update method in Sheep and
+                added import files in Manager.
+
+#########
+# Step 45
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Sheep.java and SheepPusher.java
+Change:         Implemented some methods in class Sheep and SheepPusher.
+
+#########
+# Step 46
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepManager.java, PushSheepView.java
+Change:         Implement of several methods in PushSheep.
+
+#########
+# Step 47
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  All java files in part3.
+Change:         Fixed some problems with Paint. Changed the scale of the layout.
+
+#########
+# Step 48
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepManager.java, Sheep.java, SheepPusher.java
+Change:         Add the beingPushed method into the part3 game.
+
+#########
+# Step 49
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  Sheep.java, SheepPusher.java
+Change:         Changed the pushing method in the two files, located the errors present in the program,
+                prepare to fix.
+
+#########
+# Step 50
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  BitmapBank
+Change:         codes for scaling background image.
+
+#########
+# Step 51
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  AppConstants
+Change:         change improper vars name and codes for setScreenSize
+
+#########
+# Step 52
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  Sheep.java, SheepPusher.java
+Change:         Modified the codes that do not work properly.
+
+#########
+# Step 53
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  GameEngine.java, BitmapBank.java
+Change:         updated updateAndDrawBackgroundImage method for how to generate the background image,
+                also fixed some variable naming. Fixed BitmapBank.java.
+
+#########
+# Step 54
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  GameActivity.java, AndroidManifest.xml.
+Change:         Created GameActivity.java and modified the onCreate method.
+                Added this activity to AndroidManifest.xml
+
+########
+# Step 55
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  StartGame.java, HotAirBalloonActivity.java
+Change:         Deleted duplicated java file StartGame.java. fixed HotAirBalloonActivity.java so it can
+                handle the background image in game as normal.
+
+#########
+# Step 56
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  BitmapBank
+Change:         add hotAirBalloon object in BitmapBank and create an array of size 4. Currently only have 1
+                pic of hot air balloon.
+
+#########
+# Step 57
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  HotBalloon.java
+Change:         Added HotAirBalloon.java file, created the constructor, setter and getter methods for it.
+
+#########
+# Step 58
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameEngine
+Change:         create updateAndDrawBalloon method in GameEngine`
+
+#########
+# Step 59
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  GameThread.java, AppConstants.java, HotAirBalloon.java
+Change:         Updated run method inside GameThread.java so the HotAirBalloon will show up.
+                Added buoyancy instance in teh HotAirBalloon.java and AppConstants.java.
+
+#########
+# Step 60
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameView.java and TowerGame under part1_MagicTower package, also
+                Game1EntranceActivity.java under activity package
+Change:         Changed the layout of game1 from Game1EntranceActivity, specifically introduced
+                FrameLayout that includes a LinearLayout featuring buttons and a TowerGameView layout that would
+                now be able to drawn out through TowerGameView.
+                The manager class TowerGame and Jumper class are also modified to implement the draw() and update()
+                methods that would now be able to display the screen that can hold different items in the game and
+                buttons.
+
+#########
+# Step 61
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameEngine, HotAirBalloon
+Change:         fix wrong method name bug in HotAirBalloon, change from "set/get buoyancy" to "set/get
+                velocity". Update updateAndDrawBalloon method in GameEngine class, implement automatically elevation
+
+#########
+# Step 62
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity.java, Jumper, TowerGame, TowerGameThread, TowerGameView,
+                activity_entrance.xml
+Change:         added background and warrior image for game 1, and added automatically falling movement
+                affected by simulation of gravity.
+                Falling movement is achieved by two variables in Jumper, gravity and velocity,
+                where velocity increases by gravity every time of update.
+                There should be boundary test in coming steps, for the warrior will fall outside the
+                screen.
+
+#########
+# Step 63
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  TowerGameView, Game1EntranceActivity
+Change:         stopped the use of activity_entrance.xml and deleted it. Moved the background drawing code to
+                TowerGameView.
+
+#########
+# Step 64
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Collectable, Gem, JumperSprite, Key, MapGenerator, Stairs, StationaryItem, Wall,
+                Game1EntranceActivity, Jumper, TowerGameView
+Change:         deleted redundant classes, interface, code and comments on level 1. Modified
+                method fall and jump, and now the warrior do not fall out of the screen.
+
+#########
+# Step 65
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Game1EntranceActivity.onCreate(), TowerGameThread.run()
+Change:         Refactored previously lengthy and messy codes that included instantiation of a LinearLayout
+                and a TowerGameView by introducing two new helper methods that assist with creating, customizing,
+                and adding buttons to the LinearLayout. Changed surfaceHolder field in TowerGameThread into a
+                final field, which ensures the synchronized order in run() method will be in affect.
+
+
+#########
+# Step 66
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, DBHelper, ObservableInterface, ObserverInterface, Jumper,
+                PressInfo, TowerGame, TowerGameView
+Pattern Added:  Observable & Observer
+Change:         applied Observable-Observer design pattern to game1. Because Java doesn't support
+                multiple inheritance, as a class, Observable sometimes cannot be used. And Java
+                supports multiple interface, so we design this interface for Observable-Observer
+                design patter. ObserverInterface is use together with this interface.
+                The buttons related to the layout of the game is "observable", and the warrior is
+                "observer". After the buttons are pressed, warrior(s) will be notified, the args
+                that are expressed to observers is an instance of PressInfo, a class that is newly
+                added, to tell how much force the warrior should use when jumping.
+                Now, the warrior in game1 can do simple jumping. I'm going to modified some methods
+                to make the PressInfo work better.
+                The package database is renamed as designHelper, and interface ObservableInterface,
+                ObserverInterface are added to this package.
+
+
+#########
+# Step 67
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, Jumper, TowerGameThread
+Change:         Added some features of jumping for game 1, that is, the longer a player presses the button,
+                the further the warrior jumps.
+                It is implemented by capture the up and down event of button and calculate their
+                time span.
+
+#########
+# Step 68
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameEngine, AppConstants, GameView(under package for game2)
+Change:         add code for the balloon movement, the balloon goes down when the screen is touched
+
+#########
+# Step 69
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Stairs.java, TowerGameView.java, TowerGame.java
+Change:         Created a new class Stairs that served as a solid platform that the jumper would jump on
+                and not fall down from it; later on this function of the jumper would be implemented, it is
+                currently missing. Created a initializeStairs() method in TowerGame.java that would receive the
+                call from TowerGameView to set up the stairs in the game1 layout.
+
+#########
+# Step 70
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, Jumper, Stairs, TowerGame, TowerThread
+Change:         Changed the image of the stairs and added methods for testing collision.
+                Updated the methods for logging in and signing up.
+                There are still many problems of logic about collision test.
+
+#########
+# Step 71
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  BoundingRectangle
+Change:         Added class BoundingRectangle.
+                BoundingRectangle is a class that added bound rectangle for the sides of a rectangle, in order to
+                test which side of a rectangle is collided.
+
+#########
+# Step 72
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, BoundingRectangle, Gem, Stairs, TowerGame, TowerGameView
+Change:         Added class Gem as the passing game condition of game1.
+                Modified the logic of jumping movement now the jumper can basically jump.
+                When the jumper touch the gem, he goes into game2.
+
+#########
+# Step 73
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  GameView, MainThread, Account, AccountManager, NoUsernameException,
+                UserHasExistedException, WrongPasswordException
+Change:         Removed these redundant classes.
+
+#########
+# Step 74
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  LogInActivity, activity_main.xml
+Change:         Added a button for scoreboard demonstration in log-in interface.
+
+#########
+# Step 75
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  Obstacle, TopObstacle, BottomObstacle, FlyingObject
+Change:         initiate obstacle classes
+
+# Step 76
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  Obstacle, AppConstants, BitmapBank, GameEngine
+Change:         basic implementation and structure of obstacles for game2
+
+#########
+# Step 77
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepView, PushSheepActivity
+Change:         Added a redraw method that can updated the drawing in PushSheepView class. Added the
+                corresponding call to reDraw method in each onClick method in PushSheepActivity.
+
+#########
+# Step 78
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameManager.java, Stairs.java, Gem.java, PressInfo.java
+Change:         Wrote completed and coherent Java Doc for the four classes, enabling us developers of the
+                game to more easily trace and look up the functionality of each method and class, which will help a
+                lot in refactoring or modifying the codes. Fixed a very small performance bug in the finishing
+                stage of game1: previously the game will stuck for a while after the gem has been collected, now it
+                moves on to the next game with a much smoother transition, although additional performance
+                enhancements needed in the next stage.
+
+#########
+# Step 79
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameManager.java, TowerGameView.java, Game1EntranceActivity.java, Jumper.java
+Change:         Completely fixed the previous bug of transformation from game1 to game2 after the player
+                has picked up the gem by stopping the thread through TowerGameThread.setRunning() method. Along the
+                process of fixing this bug, we also delegated the responsibility of informing the activity class
+                that Game1 has been won to the TowerGameView class, which eliminates the needs for TowerGameManager
+                to interact with the activity class directly now. Also some addition visibility modifier adjustments
+                and more Java Doc provided.
+
+#########
+# Step 80
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  All java files in Part3.
+Change:         Refactored all the codes and added doc strings for all the functions in Part3.
+
+#########
+# Step 81
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Jumper.java, TowerGameManager.java, TowerGameView.Java
+Change:         Introduced a new class in Game1 package called TowerGameBuilder, which serves the
+                responsibility of initiating all in-game objects: jumper, stairs, and gem. By refactoring out the
+                creating object process that was previously in TowerGameManager.java, we employed the design pattern
+                of Builder which would make it much easier for us to add more versions/maps to this game during the
+                next phase. Also further isolated the dependency between objects by only allowing the
+                TowerGameManager class to have access to communicate with in-game objects and not the other way
+                around.
+
+#########
+# Step 82
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  HotAirBalloonActivity, GameEngine, GameView, GameThread
+Change:         transition from game2 to game3. If the player passed game 2, the game will automatically be
+                transit to game3.(Problem here: we could not add a button to the game layout coz game 2 does not
+                use layout to display: its introduction interface uses layout but the game entity uses
+                setContent to display. So, there is no layout for the game entity as soon as the game starts. What
+                I did in this step is to set up a passing state(not yet done), if the game has not reached the
+                passing state, it is gonna update screen frame; if the game has achieved the passing state, it will
+                transit to game3' activity)
+
+#########
+# Step 83
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, AddButtonForView(Interface)
+Change:         Introduced Interface AddButtonForView in order to abstract the process of
+                adding buttons in some activities without xml layout.
+
+#########
+# Step 84
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameActivity, GameThread, Gem
+Change:         inspired from Game1EntranceActivity, change the setContentView in GameActivity class.
+                Instead of creating a single GameView, setContentView now takes in more param which includes a
+                "Jump to Game 3" button. Implement AddButtonForView into GameActivity. Now player can jump to game3
+                while playing game2. In addition, create a gem class(same as game1) to be the goal of game2. Still
+                working on the gem so incomplete.
+
+#########
+# Step 85
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  all java file under part2 package
+Change:         javadoc
+
+#########
+# Step 86
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Obstacle.java, GameEngine.java, GameThread.java, GameView.java
+Change:         Made an obstacle for the game2, initiated in the Obstacle.java.
+                Modified GameEngine, GameThread, and GameView so it compatible with the obstacle generated.
+
+#########
+# Step 87
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Obstacle.java, TopObstacle.java, GameEngine.java, GameView, hot_air_balloon_gems.png
+Change:         Made the TopObstacle object inherited from the Obstacle class.
+                Fixed the initialized coordinates of the object. Added the hot_air_balloon_gems.png for the ending
+                of the hot air balloon game.
+
+#########
+# Step 88
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  All subclasses of Obstacle, HotAirBalloon, GameEngine, GameThread, BitmapBank
+Change:         Summarize getters in BitmapBank into fewer getters and fix all wrong method name
+                caused by this. Create a row of gems that comes 5 sec after game starts. Intention is that the game will be
+                passed if the hot air balloon reaches the gems. Rename the class "TopObstacle" to "Lightning"
+
+#########
+# Step 89
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Jumper.java, TowerGameBuilder.java. TowerGameManager.java, TowerGameThread.java,
+                TowerGameView.java, AddButtonForView.java
+Change:         Completed all Java Doc for those classes, enabling us developers of the game to more easily
+                trace and look up the functionality of each method and class, which will help a lot in modifying
+                and extending the codes in the next phase.
+
+#########
+# Step 90
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  GameActivity
+Change:         add a new button that allows the player to retry game 2.
+
+#########
+# Step 91
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Obstacle.java, GameEngine.java, GameThread.java, HotAirBalloon.
+Change:         added the collision system into game 2, when the HotAirBalloon collides with the obstacle,
+                player needs to retry the game, else when the HotAirBalloon collides with the gem, player proceeds
+                to game 3.
+
+#########
+# Step 92
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  renamed package user as game, and added some abstract classes in it.
+Change:         in package game, added some abstract class for abstracting features and design.
+                GameItem:       extended by items (not included player) classes.
+                GameBuilder:    for initializing all in-game objects. The builder design
+                                pattern is applied here to facilitate the process of further
+                                constructing maps in the next phase.
+                GameManager:    extended by manager of every game.
+                GameThread:     extended by thread-controller of every game.
+                GameView:       extended by view-controller of every game.
+                GamePlayer:     extended by player class of every game.
+
+                Now this abstraction has been applied to game 1.
+                NOTICE: PLEASE APPLY THIS DESIGN TO EVERY GAME BY EXTENDING THESE CLASSES!!
+
+#########
+# Step 93
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  classes related to GameManager, GameThread, GameView in game 2 and game 3
+Change:         let classes in game 2 and game 3 extend abstract classes in game package.
+
+#########
+# Step 94
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  all java files in part2_HotAirBalloon
+Change:         Renamed Obstacle class to Sprite class, and made that the super class of all moving objects
+                in game 2. So that HotAirBalloon now is the subclass of the class Sprite. Also Fixed several
+                warnings inside part2.
+
+#########
+# Step 95
+### by: Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected: GameActivity, GameView, GameThread
+Change: when the balloon touches the gem, the game will automatically jump to game 3.
+
+#########
+# Step 96
+### by: Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected: PushSheepGame.java
+Change: Added a doc string to teach player how to play the game in part3, the doc string would be
+added into the game during Phase2.
+
+#########
+# Step 97
+### by: Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected: all java files in part2.
+Change: added documentation for part 2, fixed all the warnings.
+Added the restart method in the game activity, Modified the run method inside Game2Thread class,
+so when the balloon touches the lightning, game 2 will restart.
+
+#########
+# Step 98
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  PushSheepActivity
+Change:         added playing instruction button for game 3.
+
+
+#########
+# Step 99
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  GameEngine.java, Game2Thread, GameView.
+Change:         By using the inheritance relationship between the Sprite class and the HotAirBalloon class,
+                I merged the updateAndDrawHotAirBalloon and updateAndDrawObstacle method into a single method
+                updateAndDrawSprite method.
+
+#########
+# Step 100
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  BitmapBank
+Changed:        Switched the if statement to cases to avoid warnings.
+
+#########
+# Step 101
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  java files in part3_PushSheep package
+Change:         Created an interface PushSheetBuilder which could be implemented to build different items
+                in the game. Created class LevelOneBuilder which implements the interface PushSheetBuilder that
+                build items required in level one of the game. More discrete builders can be implemented in order
+                to make different level of the game. Applied this pattern to the codes in part 3.
+
+#########
+# Step 102
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  GameItem.java, GamePlayer.java and all classes that extend these classes.
+Change:         Extracted more common variables and functions to abstract classes GameItem and GamePlayer.
+                Applied those changes to class Gem, Jumper, Stairs, Sewer, Sheep and SheepPusher.
+
+#########
+# Step 103
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  java files in part3 package and activity package
+Change:         In activity package:
+                PushSheepLevelsActivity  : Created this activity which allow user to choose level of
+                                          the games.
+                HotAirBalloonActivity    : Change the intent for jumpToGame3Button to
+                                           PushSheepLevelsActivity.
+                PushSheepActivity        : Implement the onCreate method so that it now build
+                                           different gameviews based on levels.
+                In part3 package:
+                PushSheepView            : Implement the constructor and surfaceCreated method so
+                                           that it now build different views based on levels.
+                LevelTwoBuilder          : Created this class that implements PushSheepBuilder for
+                                           level 2 of the game
+                LevelThreeBuilder        : Created this class that implements PushSheepBuilder for
+                                           level 3 of the game
+                BuilderFactory           : Created a builder factory which make different levels of
+                                           PushSheepBuilder
+
+#########
+# Step 104
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, activity_push_sheep.xml, strings.xml
+Change:         Fixed the overlap of the buttons that presented in part3, two new problems found: push
+                button do not work properly, the buttons are not presented in proper size, and one more move always
+                taken by the character after passing a new order. Expected to get them fixed by tomorrow.
+
+#########
+# Step 105
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, Sheep.java
+Change:         Fixed the push button in part 3, the push button is working properly now in part 3, the two
+                remaining problem is the size of button up, down, left, right and the un-need update for these
+                button.
+
+#########
+# Step 106
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepActivity.java
+Change:         Fixed the problems presented in step 105, the button size could not be changed but could be
+                adjust through the linkage with activity_push_sheep.xml, for testing purposes, we persist in using
+                the button strategy we use right now, and may change in the future.
+
+#########
+# Step 107
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, PushSheepView.java, Sheep.java
+Change:         Changed the back ground of the part 3 game into bitmaps, however, an error persists that may
+                be caused by characters and background not using the same canvas, working to solve the problem.
+
+#########
+# Step 108
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  All java files in part 3.
+Change:         Added bitmap background for games in part3. Changed the sheep into the sheep bitmap. Added
+                the bitmap photos for sheep pusher, but error persists while sheep pusher is added to the map,
+                for testing purposes continue using the red box to represent the player until problem has been
+                located.
+
+#########
+# Step 109
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  Animation.java, AnimationManager,java, Constants.java, Player.java
+Change:         Added the animation classes for the player in part3, finding out a way to link the animation
+                with the rest of the displayer, planning to get the task done by next week.
+
+#########
+# Step 110
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  java files in part 3
+Change:         Move classes in part3 builder package out to part3_PushSheep package so that all classes
+                are at the same level and delete the Builder package. Let PushSheepActivity implements
+                AddButtonForView interface.
+
+#########
+# Step 111
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepManager.java, Sheep.java, SheepPush.java and PushSheepPlayer.java
+Change:         Created abstract class PushSheepPlayer which extends GamePlayer. Let class Sheep and
+                SheepPusher extends PushSheepPlayer. Implemented methods SheepPusher.push and Sheep.beingPushed so
+                that pusher can now push sheep from any direction, depends on the direction of the pusher.
+
+#########
+# Step 112
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, GameActivity, GameScore
+Change:         Added super class GameActivity and GameScore to package game. Let Game1EntranceActivity
+                inherit GameActivity and moved codes related to ObservableInterface to GameActivity.
+                I did this kind of abstraction is reasonable because I think every Game activity can be
+                observable to some extent.
+
+#########
+# Step 113
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  All class related to Builder class of Game1 and the two start up activities of the
+                app.
+Change:         Added two more levels to game1 and provided the user with the ability to choose which level
+                they would like to play. This is mainly done by providing two more builder classes which now the
+                three builder classes each represent one unique map and they all implement the common interface.
+                This enabled the code to follow the Open-Closed Principle: new modifications (for example more maps)
+                can be easily added to the game through little change to the codes.
+                Next step of Game1 would be to add the losing condition of this game, so that the three levels
+                really could mean a difference in the level of difficulty rather than simply bare difference in
+                their layouts.
+
+#########
+# Step 114
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, GameInstruction
+Change:         Added super class GameInstruction so that every game in this project can be added
+                instructions. Added instruction for game 1.
+
+#########
+# Step 115
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  activity_game1_level.xml, TowerGameView.java
+Change:         Fixed the previous alignment problem of the select level activity. Removed unnecessary codes
+                in TowerGameView class.
+
+#########
+# Step 116
+### by:         Bingchen Yang bingchen.yang@mail.utoronto.ca
+Code affected:  packages
+Change:         change the informal name for packages. No camel cases and separated by underlines.
+
+#########
+# Step 117
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  Sheep, SheepPusher, PushSheepView, LevelOneBuilder, LevelTwoBuilder, LevelThreeBuilder
+Change:         Added different backgrounds for different levels, and added the bitmap for the main character,
+                and changed the picture for all sheep in three levels.
+
+#########
+# Step 118
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity.java, activity_game1.xml
+Change:         IMPORTANT CHANGE. This change introduces a way to combine xml layout with java code
+                so that we do not need to add stationary items such as buttons by java code.
+
+#########
+# Step 119
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, all xml file in layout, strings.xml
+Change:         Combined activity_push_sheep.xml into PushSheepActivity so that the buttons are created in
+                xml file. Added some string values in strings.xml to fix hardcoded text problem in xml layouts.
+
+#########
+# Step 120
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameManager.java, TowerGameView.java, Game1EntranceActivity.java
+Change:         Implemented losing condition of game1, such that when a player falls "outside" of the
+                screen, the manager class instructs the view class to stop threads and display update; then the
+                view class informs current activity to go back to the initial choose level interface.
+
+#########
+# Step 121
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  LogInActivity, SignUpActivity, DBHelper
+Change:         Modified the methods of database and corresponding methods in LogInActivity
+                and SignUpActivity.
+
+#########
+# Step 122
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Game1EntranceActivity.java, Game1LevelActivity.java
+Change:         Fixed a bug that the message "You lose. Please try again!" would not be displayed after the
+                user lost Game1. Completed the full instruction of game-play inside Game1, so now a new player can
+                easily understand how to play this game.
+
+#########
+# Step 123
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  all Level Builders in part1 and part3, GamePlayer.java, all classes that extends
+                GamePlayer.
+Change:         Removed the color parameter in the constructor of GamePlayer since color is no longer used
+                in the classes. Made corresponding changes to all subclasses of GamePlayer, and to the builders
+                that use the constructor of those classes.
+                Changed the behavior of a sheep pusher so that it stops when it is blocked by a sheep.
+
+#########
+# Step 124
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  SheepPusher.java
+Change:         Added bitmap for different directions that allow the side the player face to be visible
+                by the player.
+
+
+#########
+# Step 125
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, PushSheepView.java, PushSheepManager.java, Sheep.java,
+                SheepPusher.java, ScoreBoardActivity.java, activity_score_board.xml
+Change:         Added winning and losing condition of game3, such that when the pusher pushes required
+                number of sheep down to the sewer, it wins, and when the pusher loses all its lives, it loses.
+                Added a new activity, ScoreBoardActivity, which is showed after the user wins game3.
+
+#########
+# Step 126
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, Game1LevelActivity, LogInActivity, SignUpActivity, DBHelper, GameActivity
+Change:         Added score demonstration for game 1 and data communication between activities by intent.
+
+#########
+# Step 127
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  all builder classes, TowerGameManager, TowerGameView, Jumper
+Change:         Added the functionality of player earning multiple lives in Game1 by introducing a Heart
+                class that player could go collect to earn one more life. Note that this is currently only
+                implemented with the most basic form; much more adjustments in both game interface and code structure
+                need to be done in the next few days. Also, this provided a gateway for the later two games
+                to simply take in the information that player potentially having multiple lives.
+                WARNING!!! In Game1, there's currently a bug: after a player dies, levels can not be selected to
+                enter a new game anymore. Needs to be fixed.
+
+#########
+# Step 128
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, Game1LevelActivity, TowerGameView
+Change:         Fixed the bug in Step 127. It is caused by the missing of variable username that
+                should be put in through intent.
+                Notice that to read data from database properly, (at least for present phase) username
+                should always been transmitted through intent.
+
+#########
+# Step 129
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1EntranceActivity, AddGameInstance, DBHelper.java, ShowGameScore, GameActivity,
+                GameScore, Game1Score
+Change:         Added functions of calculating and showing scores for game 1.
+                Score class of every level of game should inherit GameScore in game package.
+                In order to demonstrate scores, it can implement Interface ShowGameScore in designHelper.
+
+#########
+# Step 130
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameManager.java, Jumper.java
+Change:         Fixed a bug of hardcoding to increment or decrement lives of a player by changing codes
+                in TowerGameManager.drawManager() and TowerGameManager.update() method to detect changes more
+                strictly and urgently. Employed google-java-format in some codes where previously were not using.
+
+#########
+# Step 131
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepActivity.java, PushSheepView.java, PushSheepManager.java,
+                and activity_push_sheep.xml
+Change:         Added score feature in game3. First added a TextView on xml, then on the update method in
+                PushSheepView, call showScore method in PushSheepActivity while passing in the score stored in
+                PushSheepManager as a argument.
+
+#########
+# Step 132
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  PushSheepPlayer.java, SheepPusher.java
+Change:         Changed the move behavior of SheepPusher. If the pusher go in the same direction, it keeps
+                going. However, if the pusher changes direction, it doesn't move forward on the first click (only
+                change the direction on the same position.
+
+#########
+# Step 133
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+                Code affected: Game1EntranceActivity.java, HotAirBalloonActivity.java, GameActivity.java,
+                PushSheepActivity.java, Game2Thread.java, GameView.java, PushSheepLevelsActivity.java, and
+                activity_push_sheep_levels.xml.
+Change:         Connected three games together so that they are in same levels chosen by the user at the
+                beginning. On every activity class, get the level data from the last activity and pass it to the
+                next activity.
+                For game2, moved the update method in Game2Thread to GameView, and now it is able to start game3
+                properly under winning condition.
+                Deleted PushSheepLevelsActivity.java, and activity_push_sheep_levels.xml.
+
+#########
+# Step 134
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SignUpActivity.java, Game1EntranceActivity.java, HotAirBalloonActivity.java,
+                part2 GameActivity.java,PushSheepActivity.java, DBHelper.java
+Change:         Add onStop and onPause methods on Game1EntranceActivity.java, HotAirBalloonActivity.java,
+                part2 GameActivity.java and PushSheepActivity.java so that when the user exits the game, it stores
+                which level and which game the user is in before he exits (using DBHelper).
+                Changed SignUpActivity in a way that the user is created with default level and game at 0
+                instead of 1.
+                Add a new value GAME stored in DBHelper that stores which game the user is playing.
+
+#########
+# Step 135
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  HotAirBalloonActivity.java, AndroidManifest.xml
+Change:         Solve the game2 running problem. Rewrote HotAirBalloonActivity.startGame() method so that
+                the intent is more specific. Change the game2 GameActivity name in AndroidManifest.xml so that
+                it can now be found by intent.
+
+#########
+# Step 136
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  GameThread, TowerGameThread, TowerGameView, GameView, PushSheepThread, PushSheepView
+Change:         Fix a bug that when game 1 and game 3 onResume(), the program
+                throws IllegalThreadStateException(). The reason that is a THREAD cannot be restarted.
+                What I did here is to make the superclass GameThread not to extend Thread but to
+                implement Runnable, and every time the game thread is started, it calls
+                new Thread(gameThread).start(); (anonymously)
+                in order to avoid this exception being thrown.
+
+                BUT THE CHANGE OF THE SUPERCLASS "GameThread" AFFECTED ALL ITS SUBCLASS.
+                PLEASE CHECK WHETHER YOUR CODE STILL RUNS PROPERLY AFTER THIS CHANGE!!!
+                FOR NOW I HAVE NOT FOUND ANY BUGS.
+
+#########
+# Step 137
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  PushSheepThread, PushSheepView
+Change:         Fix a bug. The initialization of manager of game 3 should be completed in the
+                constructor of GameView of game 3 rather than void surfaceCreated().
+                Otherwise, every time game 3 is returned from another interface, the status before
+                leaving it cannot be saved and returned to.
+
+#########
+# Step 138
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  uwatergun, lwatergun, rwatergun, dwatergun, SheepPusher.java, PushSheepActivity.java
+Change:         Changed the color of the score text into orange, and added the animation of push to sheep pusher,
+                the animation would be further modified to make the layout prettier.
+
+#########
+# Step 139
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  TowerGameManager.java, Jumper.java, Game1Score
+Change:         Made the gem also collectable just as the heart. Added a constraint so that a user can not
+                have a score of under 10 throughout Game1. In other words, the minimum score the user can earn after
+                won Game1 is 10.
+
+#########
+# Step 140
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  ScoreBoardActivity.java, PushSheepActivity.java, LogInActivity,java,
+                activity_score_board.xml,activity_push_sheep.xml
+Change:         On the scoreboard in LogInActivity, added a new element so that it now also shows which
+                game the user is playing.
+                Implemented the ScoreBoardActivity so that it shows top 10 ranking of the game and also the
+                ranking of the user. User can also choose to go back to log in page or restart the game from
+                the very beginning(choose level).
+
+#########
+# Step 141
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  all files in part_magic_tower package that lack JavaDoc.
+Change:         Completed all missing or incomplete JavaDoc in the Game1 package. Refactored lengthy methods
+                in TowerGameManager.java into smaller private helper methods.
+
+#########
+# Step 142
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  all xml files and SheepPusher.java
+Change:         Added background for all layouts, changed some text colors to make the layout clearer.
+                Added a help method for SheepPusher to allow further modification.
+
+#########
+# Step 143
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  GameThread, GameView, TowerGameThread, TowerGameView, Game2Thread, PushSheepThread,
+                PushSheepView
+Change:         Abstracted variables and methods of View and Thread to their superclass
+                GameView and GameThread.
+
+#########
+# Step 144
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SheepPusher.java
+Change: Rewrote SheepPusher.getAniRect() so that it now correctly draw the water gun.
+
+#########
+# Step 145
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  GameView, TowerGameView, PushSheepThread, PushSheepView
+Change:         Abstracted variables and methods of View to their superclass GameView.
+
+#########
+# Step 146
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  all java files in part3 package
+Change:         Refactored the codes by writing helper functions, adding docstrings and reorganizing
+                the codes.
+
+#########
+# Step 147      Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  GameEngine.java, GameView in part2.
+Change:         Refactored GameEngine to AirBalloonManager, and implemented the inheritance relationship with
+                the super class GameManager. Renamed GameView to AirBalloonView.
+
+#########
+# Step 148
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Item, Player
+Change:         Moved some methods and variables to superclasses and let GamePlayer extend GameItem.
+
+#########
+# Step 149
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  BoundingRectangle, Collide, GameCollideItem, GameItem, GamePlayer, Stairs, TowerGameThread
+Change:         Added an Interface Collide for collision test and introduced an abstract subclass of
+                GameItem called GameCollideItem, which is a class that is extended by those classes
+                needing collision-test function.
+
+#######
+# Step 150
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  activity_sign_up.xml, SheepPusher.java, LevelOneBuilder.java, LevelTwoBuilder.java, LevelThreeBuilder.java,
+Change:         Changed the color of the text in signup activity to make layout clearer, redrawed the maps
+                in level one, two and three in game three to make the difficulties matches the levels
+Change:         Moved some methods and variables to superclasses and let GamePlayer extend GameItem##
+
+#########
+# Step 151
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game3Score.java, PushSheepManager.java, PushSheepView.java, Sheep.java,
+                Game1Score.java, DBHelper.java, Game1EntranceActivity.java, PushSheepActivity.java
+Change:         Created Game3Score class that extends the abstract class GameScore. Use this class
+                and the observer design pattern to implements the score system in game3.
+                Added a new element in DBHelper, LOCAL_SCORE that stores the score for one round of the game.
+                Let game1 now update LOCAL_SCORE instead of SCORE when changing the scores.
+
+#########
+# Step 152
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SaveScoreActivity.java, PushSheepActivity.java, ScoreBoardActivity.java,
+                activity_save_score.xml, AndroidManifest.xml
+Change:         Created SaveScoreActivity class that extends the abstract class GameActivity. This class
+                allows users to choose to update his score or not. Now, when the user win the push sheep game, it
+                goes to the saveScoreActivity, then goes to the ScoreBoardActivity.
+
+#########
+# Step 153
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  Sheep.java, LevelOneBuilder.java, LevelTwoBuilder.java, LevelThreeBuilder.java,
+                activity_save_score.xml
+Change:         Changed the Bitmap of the sheep in game3 to make it clearer. Added several sheep to level1
+                and level2 in game3 to make sheep number consistent. Added background for save_score activity.
+                Changed the color of the button in game 3.
+
+#########
+# Step 154
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  EnterGameWay, LogInActivity, DBHelper, activity_enter_game_way.xml
+Change:         Added Activity to let player choose to load game or start new game.
+
+#########
+# Step 155
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Gem.java, Hearts.java, Jumper.java, TowerGameManager.java, TowerGameView.java,
+                GameCollectableItem.java.
+Change:         Introduced a more suitable superclass GameCollectableItem for collectable items in
+                Game1, Gems and Hearts to refactor out redundant codes. Simplify the logic
+                throughout long methods in Game1.
+
+#########
+# Step 156
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  EnterGameWay.java renamed to ChooseReloadActivity.java, GameThread.java
+Change:         Quasi-implemented functionality of a save and read to get back to the level. Many
+                changes needed: hardcoding methods in the activity can be factored out to get rid of
+                redundant codes; still do not return to the actual position (in terms of player
+                progress at that level of the game) of the game.
+
+#########
+# Step 157
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  all java classes that use DBHelper, PushSheepView.java, ChooseReloadActivity.java
+Change:         Removed redundant if loops in class ChooseReloadActivity and corrected the scores
+                when reload game3. Changed all keywords in DBHelper that is used in other classes to
+                the corresponding getter.
+
+#########
+# Step 158
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  all packages
+Change:         Changed names of classes according to development standard of this project.
+
+#########
+# Step 159
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  all packages
+Change:         Changed names of packages according to development standard of this project.
+
+#########
+# Step 160
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  package game1
+Change:         Added packages to explicitly implement MVP architectural pattern for game 1.
+                And modified the architecture according to phase 1 feedback:
+                "However, often it is helpful to put all classes at the same level. If some classes
+                are directly inside packages, but there are folders at the same level which,
+                themselves, also contain classes, it makes it more difficult to find your classes.
+                Try to organize class files so that they are all at the same level."
+
+#########
+# Step 161
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  package game
+Change:         Added packages to explicitly implement MVP architectural pattern for game.
+
+#########
+# Step 162
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  package game3
+Change:         Added sub-packages inside game3 package to apply MVP architectural pattern for
+                game3.
+                Note that
+                    a) currently almost all methods and classes in the game3 package are marked as
+                     public for purpose of able to run the codes; stricter accessibility modifiers
+                     should be tried to apply later to lower coupling.
+                    b) Player class in game3 package is not put into any package right now because
+                     it is not currently being used.
+
+#########
+# Step 163
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  AirBalloonView.java, Game2Thread.java
+Change:         Made AirBalloonView.java inherits GameView.java, edited Game2Thread.java for
+                compatibility.
+
+#########
+# Step 164
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  java classes in game3 package
+Change:         Moved class Sheep under subpackage hero instead of item. Changed unnecessary public
+                modifier to package private. Deleted unuseful classes Constants, Player, and
+                PushSheepGame.
+
+#########
+# Step 165
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  HotAirBalloonActivity.java, ChooseReloadActivity
+Change:         Fixed the error that occurs when reload game to game2.
+
+
+#########
+# Step 166
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game3Hero.java, SheepPusher.java
+Change:         Fixed the bug happens when pushing sheep in game3. Originally, if the sheep is
+                pushed two distances away, it won't fall even it touches the sewer on the first
+                distance.
+
+#########
+# Step 167
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  DBHelper.java, all java classes that use lives feature
+Change:         Added a new element in DBHelper, LIVES that stores the number of lives for one round
+                of the game. Let game activities share this number, so that if the user collect
+                extra lives in game1, it can be used in game2 and game3.
+
+#########
+# Step 168
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  DBHelper.java, all activity classes
+Change:         Implements DBHelper and activity classes to close the resource (SQLiteDatabase,
+                Cursor) after using it. Added a new element in DBHelper, GAME3_SCORE that stores
+                scores gains in game3, which is useful when reload the game to game3.
+
+#########
+# Step 169
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  DBHelper.java
+Change:         Fixed a minor mistake on resetData method in DBHelper, which is called when the user
+                to start a new game. It originally also reset the value for SCORE, which is not
+                supposed to, since that score should always stay there unless the user want to
+                change it.
+
+#########
+# Step 170
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  SheepPusher.java, activity_enter_game_way.xml
+Change:         Changed the parameter name of the bitmaps in SheepPusher to make them clearer. Added
+                the background image for the game entering page.
+
+#########
+# Step 171
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  README.md
+Change:         Added README file to this project in phase2 folder.
+
+#########
+# Step 172
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  notes.txt
+Change:         Reformatted notes.txt.
+
+#########
+# Step 173
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  packages
+Change:         Modified the structure of packages.
+
+#########
+# Step 174
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game1Builder, Level1Builder, Level2Builder, Level3Builder, Game1Manager, Game1View
+Change:         Added background switching feature for game 1. Now game 1 has different backgrounds
+                determined by the level which is being played.
+
+#########
+# Step 175
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Classes in activity package
+Change:         Renamed and structured classes in activity package to make everything consistent and
+                more readable.
+
+#########
+# Step 176
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affectee:  all activities
+Change:         Removed the title of all activities.
+
+#########
+# Step 177
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affectee:  game2new package
+Change:         Implemented the design standard of the project to refactor game 2.
+
+
+#########
+# Step 169
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game2Activity.java, Game2MainActivity.java, Game3Activity.java, Game3Manager.java,
+                Game3View.java, Sheep.java
+Change:         Fixed error with disconnection between games by rewrite the correct String indicates
+                activities for intent. Rewrote score related method in Game3 so that manager will
+                not use view.
+
+#########
+# Step 170
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Game1Manager.java, Game1View.java
+Change:         Introduced a new class called Game1StatusUpdater under game1.presenter.processor
+                package. This class is added for two reasons:
+                a) Decouple the relationship between Game1View and Game1Manager class which are kept
+                   under separate packages. This is done by letting the Game1StatusUpdater class
+                   implemented the Observer pattern to simply notify the Game1View class, which
+                   means no storage of instances are needed.
+                b) Let the Game1View class follow the Single Responsibility Principle under SOLID.
+                   Previously, the view class needs to continuously check for conditions and draw
+                   the according things. This should not be responsibility of a high-level class,
+                   like any view class. Now, Game1View just does one thing by calling the Manager
+                   to update while waiting for the results.
+
+#########
+# Step 171
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Game1View.java
+Change:         A minor bug that the lives text in the activity does not change is fixed.
+
+#########
+# Step 172      IMPORTANT STEP
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  GameThread
+Change:         Fixed a bug.
+                The variable canvas in GameThread should not be static.
+                Otherwise, there would be exception thrown when changing activity, because the
+                previous surface(canvas) has been locked and cannot be locked again.
+
+#########
+# Step 173
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  README.md
+Change:         Added description to the How to extend this game? in README file and modified the
+                Game description.
+
+#########
+# Step 174
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  Game1Manager.java, Game1Hero.java
+Change:         Made the variable listOfStairs in Game1Manager.java to be an instance variable
+                rather than a class variable like before. Class variables make codes hard to test
+                and may cause run-time bugs that are hard to detect.
+
+#########
+# Step 174      Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Partial files in game2new, game2MainActivity.java
+Change:         added update method to gem.java, update the balloon movement.
+
+#########
+# Step 175
+###by:          Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Game2Hero.java, Game2View.java, Game2MainActivity.java
+Change:         Modified how the game2hero update throughout the game 2, bond the down button to
+                the game2hero so when pressed down, it changes direction.
+
+#########
+# Step 176
+###by:          Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Level2Builder.java, Gem.java, GameCollectibleItem.java
+Change:         Added another constructor in the super class GameCollectibleItem.java, so that we
+                can set the gem location when initiate the gem instance inside the Gem.java.
+
+#########
+# Step 177
+###by:          Yunfei Ouayng yunfei.ouyang@mail.utoronto.ca
+Code affected:  Level2Builder.java, Game2Manager, Gem.java, Lightning.java, Game2Hero.java
+Change:         Modified how lightning update, Modified how Gem and Lightning update in the
+                Game2Manager, Modified the constructor of Lightning class so we can set the
+                position of the lightning.
+
+#########
+# Step 178
+###by:          Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Game2View.java, Game2Manager.java, game2.model, Game2MainActivity.java
+Change:         Updated the collision system for part2, so that the game2Hero interact correctly
+                with lightnings and gems.
+Bug to fix:     live is still buggy in part2. going to find a fix for it later.
+
+#########
+# Step 179
+###by:          Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  BuilderFactory.java
+Change:         Modified BuilderFactory.java and created 3 simple level for game2.
+
+#########
+# Step 180
+###by:          Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  3 LevelBuilders for game2
+Change:         Designed different set up for 3 different levels, varied the initial location of
+                lightnings and gems.
+
+#########
+# Step 181
+###by:          Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  DBHelper, Game2Manager, Game2View, ChooseReloadActivity
+Change:         Create score system for game2 and changed relevant methods in DBHelper.
+
+#########
+# Step 182
+###by:          Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  activity_game2_main_activity.xml, level builders for game 2
+Change:         change the color of scoreTextView for game 2. Change the initial location of hot air
+                balloon for game 2. So far, game 2 is still experience a bug where the balloon hits
+                a lightning but does not die.
+
+#########
+# Step 183
+###by:          Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  activity_game2_main_activity.xml, Game2Score, Game2MainActivity
+Change:         design the live feature for game2, change the amount of score players get when
+                collide with gems.
+
+#########
+# Step 184
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game3View.java, Game3Manager.java
+Change:         Changed the move and push methods in Game3View so that it doesn't directly use
+                method in SheepPusher class. Instead, call the method in Game3Manager and let the
+                manager calls the method in SheepPusher class.
+
+#########
+# Step 185
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  DBHelper, GameScore subclasses and 3 game activity, ChooseLevelActivity.java,
+                ChooseReloadActivity.java, Game3View.java, Game3Manager.java
+Change:         Added a new element GAME1_SCORE in DBHelper. Changed the strategy for the score
+                system. The LOCAL_SCORE is the total scores for a round. GAME1_SCORE, GAME2_SCORE,
+                and GAME3_SCORE are the scores only for this game, which is helpful with the reload
+                activity since we need to revert score change once we reload a game.
+                Fixed a bug in showing lives in game 3.
+
+#########
+# Step 186
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  Gem, Lightning, Obstacle, Game2Builder, Level builders for game 2, Game2Manager
+Change:         Create an interface Obstacle to be able to create an arrayList of obstacle including
+                lightning and buildings(new: a bottom obstacle). Could not do that since it is
+                impossible to create an arrayList of GameCollideItem and put lightning or building
+                into the array(even if lightning and building are child class of GameCollideItem).
+                The solution is to create an Obstacle interface which is implemented by lightning
+                and building. So instead of creating an arrayList of GameCollideItem, now of
+                Obstacle. In addition, designed and modified level feature for game2.
+
+#########
+# Step 187
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  Cloud, level builder for game2, Game2Manager
+Change:         added Cloud as a new kind of Obstacle. Also, tried making gems and cloud as child
+                classes of GameCollideItem and both implement a new interface ItemInMiddle: so when
+                balloon touches gems, score is gained; cloud, lost. This feature involves a great
+                deal of change in Game2Manager, Game2View, Game2Score, Game2MainActivity. In
+                Game2MainActivity, create a new notifyObserver so Game2Score knows whether to add to
+                score or to lose. However, this change leads to a crash right after ChooseLevel. It
+                seems to be something is messed up on database. I reversed all change so the game is
+                able to run. By the time I push this message, I suspect that the game would run with
+                the feature mentioned just now if I re-install the AVD. That is also my purpose to
+                push this change, so that I could redo that lose score feature and re-install AVD to
+                test it out.
+
+#########
+# Step 188
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  models in game2, Game2View.java, Game2Manager.java
+Change:         Updated the collision, so that the hero in game 2 collects gem correctly, still have
+                bug to fix on the collision with obstacles.
+
+#########
+# Step 189
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  all java files in game3 package, Game3Activity.java
+Change:         Refactored game3 classes by standardizing codes and JavaDoc and deleting useless
+                items. Also, rewrote some methods to avoid repeated codes.
+
+#########
+# Step 190
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game3Score.java, Game3Activity.java
+Change:         Implemented score rates for different level in game 3.
+
+#########
+# Step 191
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Game2Hero, Game2Manager
+Change:         Changed the OnClick logic of game 2.
+
+
+#########
+# Step 192
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  SheepPusher.java, Game3Activity.java
+Change:         Modified the instruction in Game3 and changed the bitmap display of the hero in
+                Game3.
+
+#########
+# Step 193
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  Building, Cloud, Lightning, Obstacle, Level builders for game2, Game2Manager,
+                cloud image files in res
+Change:         Removed Obstacle interface and instead implement updatable, removable in Building,
+                Cloud, Lightning classes. Consequently, modified relevant initiation call, update
+                call, and checkCollision call in Game2Manager and Level Builders. In addition,
+                updated png file for cloud instead of jpg
+
+#########
+# Step 194
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  all in game2new hero, Game2Manager.java
+Change:         Made the collision working.
+
+#########
+# Step 195
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Game2Hero.java, Game2Manager.java, Game2View.java, Game2MainActivity.java
+Change:         Fixed a bug when click, score is added.
+
+#########
+# Step 196
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  gameScore classes, gameActivity classes and gameView classes for three games
+Change:         Decoupled the relationship between gameScore and gameActivity.
+
+#########
+# Step 197
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  DBHelper.java, Game3Score.java, GameThread.java, Game3View.java, README.md
+Change:         Added the background story of the game and the Project Architecture in the README
+                file, deleted all the unused codes in all the java files listed above.
+
+#########
+# Step 198
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  classes that use resource files
+Change:         Renamed most resource files.
+
+#########
+# Step 199
+### by:         Yunfei OUyang yunfei.ouyang@utoronto.ca
+Code affected:  Game2Manager.java
+Change:         modified so that when game2Hero intersects with obstacle, game restart.
+
+#########
+# Step 200
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  README.txt
+Change:         Completed README.txt file with complete instructions and description of key
+                components of this project.
+
+#########
+# Step 201
+### by:         Zijian Xu zj.xu@mail.utoronto.ca
+Code affected:  class files under activity package that lacks Javadoc.
+Change:         Provided Javadoc for some of those classes.
+
+#########
+# Step 202
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  level builders for game2
+Change:         modified the creation of cloud in game2.
+
+#########
+# Step 203
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Game2Manager.java, Game2View.java, Game2Hero.java, Game1Hero.java,
+                Game2MainActivity.java
+Change:         Update the starting live to 2 from 1, modified the show lives for game2 so that
+                it update and store correctly.
+
+#########
+# Step 204
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game1Activity.java, Game2MainActivity.java, Game3Activity.java,
+Change:         Fixed the bug about score update when reloading the game. On activity class, move
+                the update database call before creating new view call. If not, the GameView and
+                GameScore would be created in terms of the previous data.
+#########
+# Step 205
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  all files under game2 package
+Change:         javadoc for all classes under game2 package, delete old game2 and rename game2new
+                to game2.
+
+#########
+# Step 206
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  Game2Activity, Game2MainActivity,activity_game2.xml
+Change:         javadoc for Game2Activity and Game2MainActivity. Removed the text"play" in
+                activity_game2.xml and added game2Instruction button in it and designed relative
+                calls in Game2Activity.
+
+#########
+# Step 207
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Game2Hero.java, Game1Hero.java, Gem.java, builder in game2
+Change:         Set the starting live to 3 lives, updated the last gem.
+
+#########
+# Step 208
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  All files in helper package except fot DBHelper, java files in Game3 package.
+Change:         Added the doc string for all java files in helper package and Game3 package, except
+                for the DBhelper.
+
+
+#########
+# Step 209
+### by:         Bingchen Yang bingnchen.yang@mail.utoronto.ca
+Code affected:  Game2Manager, Game2Score, Gem
+Change:         reedit javadoc, removed unused method
+
+#########
+# Step 210
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game3Manager.java, and level builders in game3
+Change:         Changed the map for level 1 game 3. Implemented level builder and manager so that
+                it has a dynamic goal for each level instead of a fixed number, which is the number
+                of sheep in that game.
+
+#########
+# Step 211
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  Level1Builder.java
+Change:         Made it easier.
+
+#########
+# Step 212
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  Game activities and corresponding xml files
+Change:         Deleted connect buttons and corresponding methods.
+
+#########
+# Step 222
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  files in this project
+Change:         Reformatted files in this project.
+
+#########
+# Step 223
+### by:         Luomeng Tan luomeng.tan@mail.utoronto.ca
+Code affected:  SheepPusher.java, some files in this project
+Change:         Renamed some variables SheepPusher class and reformatted some files in this project.
+
+#########
+# Step 224
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  Collide
+Change:         Removed an interface that only extends other interfaces.
+
+#########
+# Step 224
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  DBHelper
+Change:         Added some javadoc.
+
+#########
+# Step 225
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  classes in game package.
+Change:         Organized package architecture in game package for consistency.
+
+#########
+# Step 226
+### by:         Yunfei Ouyang yunfei.ouyang@mail.utoronto.ca
+Code affected:  game2 package.
+Change:         Added javadoc for every java file in the game2 package.
+
+#########
+# Step 225
+### by:         Yuqin Yan yuqin.yan@mail.utoronto.ca
+Code affected:  RoughCollide, BoundingRectangle
+Change:         Removed a redundant interface, RoughCollide.
+
+#########
+# Step 226
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  design.pdf series of files
+Change:         Added the uml files for the classes.
+
+#########
+# Step 227
+### by:         Xinyi Xu tiffanyandjojo.xu@mail.utoronto.ca
+Code affected:  README.txt
+Change:         Modified the uml diagram part in the README.txt.
