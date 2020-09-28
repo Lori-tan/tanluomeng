@@ -10,6 +10,6 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pwd
+          command: echo "haha"
       - run:
           command: ./gradlew build
