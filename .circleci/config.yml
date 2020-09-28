@@ -10,8 +10,4 @@ jobs:
     steps:
       - checkout
       - run:
-          command: 
-           PATH=$pwd
-           PATH/gradlew build
-      - run:
-          command: ./gradlew build
+          command: ../csc207/phase2/gradlew build
