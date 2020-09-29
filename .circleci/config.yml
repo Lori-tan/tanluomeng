@@ -10,4 +10,4 @@ jobs:
     steps:
       - checkout
       - run:
-          command: cat ~/../csc207/phase2/README.txt
+          command: ./csc207/phase2/gradlew build
