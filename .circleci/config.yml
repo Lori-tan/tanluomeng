@@ -11,3 +11,4 @@ jobs:
       - checkout
       - run:
           command: ./csc207/phase2/gradlew build
+          command: ./csc207/phase2/gradlew test
