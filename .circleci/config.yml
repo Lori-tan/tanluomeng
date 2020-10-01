@@ -6,9 +6,11 @@ orbs:
 jobs:
   build:
     executor: android/android
-        
+    
+  working_directory: ./csc207/phase2
+  
     steps:
       - checkout
       - run:
-          command: ./csc207/phase2/gradlew test
-                   
+          command: ./csc207/phase2/gradlew build
+                   ./csc207/phase2/gradlew test
