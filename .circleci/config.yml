@@ -6,8 +6,8 @@ orbs:
 jobs:
   build:
     executor: android/android
-    
-  working_directory: ./csc207/phase2
+
+    working_directory: ./csc207/phase2
   
     steps:
       - checkout
